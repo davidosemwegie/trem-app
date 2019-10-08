@@ -1,5 +1,7 @@
-import PageTitle from './pageTitle'
+import PageTitle from './PageTitle'
+import Header from './Header'
 
 module.exports = {
-    PageTitle
+    PageTitle,
+    Header,
 }

@@ -2,28 +2,37 @@ import React, { Component } from "react";
 import { 
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    Platform,
+    StatusBar
 } from "react-native";
 
+const PageTitle = (props) => {
 
-class PageTitle extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title_style} allowFontScaling={false}>{this.props.title}</Text>
-            </View>
-        );
-    }
+    componentDidMount = () => {
+      this.headerHeight = 100
+
+      if (Platform.OS == 'android') {
+          this.headerHeight = 100 + StatusBar.currentHeight
+      }
+    };
+    
+    const {container, title} = styles
+    return(
+        <View>
+            <Text style={title} allowFontScaling={false}>{props.children}</Text>
+        </View>
+        
+    )
 }
 export default PageTitle;
 
 const styles = StyleSheet.create({
-    container: {
-        margin: 25
-    }, 
-    title_style: {
-        fontFamily: "Helvetica Neue",
-        fontWeight: '900',
-        fontSize: 35
+    title:{
+        marginTop: 55,
+        marginLeft: 15,
+        fontSize: 40,
+        fontWeight: 'bold',
+        color: 'rgb(0,0,0)'
     }
 });

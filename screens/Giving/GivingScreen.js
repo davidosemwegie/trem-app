@@ -11,7 +11,9 @@ class GivingScreen extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                <common.PageTitle title="Giving" />
+                <common.Header>
+                    <common.PageTitle>Giving</common.PageTitle>
+                </common.Header>
             </SafeAreaView>
         );
     }

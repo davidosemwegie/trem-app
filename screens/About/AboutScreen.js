@@ -12,7 +12,9 @@ class AboutScreen extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                <common.PageTitle  title="About" />
+                <common.Header>
+                    <common.PageTitle>About</common.PageTitle>
+                </common.Header>
             </SafeAreaView>
         );
     }

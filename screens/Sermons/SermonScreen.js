@@ -13,8 +13,9 @@ class SermonScreen extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                {/* <Button title="Sermon Title" onPress={() => this.props.navigation.navigate("SermonPage")}  /> */}
-                <common.PageTitle title="Sermons" />
+                <common.Header>
+                    <common.PageTitle>Sermons</common.PageTitle>
+                </common.Header>
             </SafeAreaView>
         );
     }
